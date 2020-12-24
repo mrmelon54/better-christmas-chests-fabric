@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "betterchristmaschests",
+  "version": "${version}",
+  "name": "BetterChristmasChests",
+  "description": "Changes the textures for the enderchest and trapped chest at Christmas",
+  "authors": [
+    "MrMelon"
+  ],
+  "contact": {
+    "homepage": "https://minecraft.onpointcoding.net/mods/betterchristmaschests",
+    "sources": "https://codehub.onpointcoding.net/sean/better-christmas-chests-fabric-1.16"
+  },
+  "license": "MIT",
+  "icon": "assets/betterchristmaschests/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.onpointcoding.betterchristmaschests.client.BetterChristmasChestsClient"
+    ],
+    "main": [
+      "net.onpointcoding.betterchristmaschests.BetterChristmasChests"
+    ]
+  },
+  "mixins": [
+    "BetterChristmasChests.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.10.8",
+    "fabric": "*",
+    "minecraft": "1.16.4"
+  },
+  "custom": {
+    "modmenu:clientsideOnly": true
+  }
+}
