@@ -9,7 +9,7 @@ import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.util.Identifier;
 import net.onpointcoding.betterchristmaschests.BetterChristmasChests;
-import net.onpointcoding.betterchristmaschests.config.ChristmasChestsEnabled;
+import net.onpointcoding.betterchristmaschests.enums.ChristmasChestsEnabled;
 import net.onpointcoding.betterchristmaschests.config.ConfigStructure;
 import net.onpointcoding.betterchristmaschests.utils.ChristmasableSpriteIdentifier;
 import org.spongepowered.asm.mixin.Final;

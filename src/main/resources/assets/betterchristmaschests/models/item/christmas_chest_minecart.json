@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "betterchristmaschests:item/christmas_chest_minecart"
+  }
+}
