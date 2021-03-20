@@ -2,7 +2,7 @@ package net.onpointcoding.betterchristmaschests.enums;
 
 public enum ChristmasChestsEnabled {
     ALWAYS("Always"),
-    AT_CHRISTMAS("At Christmas"),
+    AT_CHRISTMAS("Only At Christmas"),
     NEVER("Never");
 
     private final String name;
