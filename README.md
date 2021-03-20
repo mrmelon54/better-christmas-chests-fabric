@@ -1,5 +1,13 @@
 # Better Christmas Chests
 
+Requires the [Fabric Loader](https://fabricmc.net/use/) and [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
+
+Logo made by [@LimeShulkerBox](https://www.curseforge.com/members/limeshulkerbox/projects)
+
+## Setup
+
+- Drop the mod in the mods folder
+
 ## Details
 
 Changes the textures used for Enderchests and trapped chests at Christmas as vanilla uses the same texture.
