@@ -11,5 +11,19 @@ import net.onpointcoding.betterchristmaschests.enums.ChristmasChestsEnabled;
 public
 class ConfigStructure implements ConfigData {
     @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
-    public ChristmasChestsEnabled christmasChestsEnabled = ChristmasChestsEnabled.AT_CHRISTMAS;
+    public ChristmasChestsEnabled christmasModeEnabled = ChristmasChestsEnabled.AT_CHRISTMAS;
+
+    // Enable horse types separately
+    // The normal, zombie and skeleton variants of the Christmas horse chests can't be seen in vanilla
+    public boolean christmasHorseEnabled;
+    public boolean christmasZombieHorseEnabled;
+    public boolean christmasDonkeyEnabled;
+
+    // Enable chest types separately
+    public boolean christmasChestEnabled;
+    public boolean christmasTrappedChestEnabled;
+    public boolean christmasEnderChestEnabled;
+
+    // Enable minecart with chest type separately
+    public boolean christmasMinecartWithChestEnabled;
 }

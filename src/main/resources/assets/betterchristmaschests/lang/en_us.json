@@ -1,4 +1,11 @@
 {
   "text.autoconfig.betterchristmaschests.title": "Better Christmas Chests",
-  "text.autoconfig.betterchristmaschests.option.christmasChestsEnabled": "Visible:"
+  "text.autoconfig.betterchristmaschests.option.christmasModeEnabled": "Visible:",
+  "text.autoconfig.betterchristmaschests.option.christmasHorseEnabled": "Horse enabled?",
+  "text.autoconfig.betterchristmaschests.option.christmasZombieHorseEnabled": "Zombie/skeleton horse enabled?",
+  "text.autoconfig.betterchristmaschests.option.christmasDonkeyEnabled": "Donkey/mule enabled?",
+  "text.autoconfig.betterchristmaschests.option.christmasChestEnabled": "Chest enabled?",
+  "text.autoconfig.betterchristmaschests.option.christmasTrappedChestEnabled": "Trapped chest enabled?",
+  "text.autoconfig.betterchristmaschests.option.christmasEnderChestEnabled": "Ender chest enabled?",
+  "text.autoconfig.betterchristmaschests.option.christmasMinecartWithChestEnabled": "Minecart with chest enabled?"
 }

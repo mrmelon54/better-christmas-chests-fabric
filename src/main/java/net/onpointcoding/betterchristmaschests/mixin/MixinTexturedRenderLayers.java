@@ -9,8 +9,6 @@ import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.util.Identifier;
 import net.onpointcoding.betterchristmaschests.BetterChristmasChests;
-import net.onpointcoding.betterchristmaschests.enums.ChristmasChestsEnabled;
-import net.onpointcoding.betterchristmaschests.config.ConfigStructure;
 import net.onpointcoding.betterchristmaschests.utils.ChristmasableSpriteIdentifier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -80,37 +78,37 @@ public abstract class MixinTexturedRenderLayers {
         if (blockEntity instanceof TrappedChestBlockEntity) {
             switch (type) {
                 case LEFT:
-                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(TRAPPED_LEFT, TRAPPED_CHRISTMAS_LEFT);
+                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(TRAPPED_LEFT, TRAPPED_CHRISTMAS_LEFT, BetterChristmasChests.getInstance().enableChristmasTrappedChest());
                     break;
                 case RIGHT:
-                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(TRAPPED_RIGHT, TRAPPED_CHRISTMAS_RIGHT);
+                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(TRAPPED_RIGHT, TRAPPED_CHRISTMAS_RIGHT, BetterChristmasChests.getInstance().enableChristmasTrappedChest());
                     break;
                 case SINGLE:
                 default:
-                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(TRAPPED, TRAPPED_CHRISTMAS);
+                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(TRAPPED, TRAPPED_CHRISTMAS, BetterChristmasChests.getInstance().enableChristmasTrappedChest());
                     break;
             }
         } else if (blockEntity instanceof EnderChestBlockEntity) {
-            christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(ENDER, ENDER_CHRISTMAS);
-        } else if (blockEntity instanceof ChestBlockEntity) {
+            christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(ENDER, ENDER_CHRISTMAS, BetterChristmasChests.getInstance().enableChristmasEnderChest());
+        } else if (blockEntity instanceof ChestBlockEntity && BetterChristmasChests.getInstance().enableChristmasChest()) {
             switch (type) {
                 case LEFT:
-                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(NORMAL_LEFT, CHRISTMAS_LEFT);
+                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(NORMAL_LEFT, CHRISTMAS_LEFT, BetterChristmasChests.getInstance().enableChristmasChest());
                     break;
                 case RIGHT:
-                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(NORMAL_RIGHT, CHRISTMAS_RIGHT);
+                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(NORMAL_RIGHT, CHRISTMAS_RIGHT, BetterChristmasChests.getInstance().enableChristmasChest());
                     break;
                 case SINGLE:
                 default:
-                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(NORMAL, CHRISTMAS);
+                    christmasableSpriteIdentifier = new ChristmasableSpriteIdentifier(NORMAL, CHRISTMAS, BetterChristmasChests.getInstance().enableChristmasChest());
                     break;
             }
         }
         if (christmasableSpriteIdentifier != null) {
-            BetterChristmasChests instance = BetterChristmasChests.getInstance();
-            ConfigStructure config = instance.getConfig();
-            boolean christmasChests = config.christmasChestsEnabled == ChristmasChestsEnabled.ALWAYS || (config.christmasChestsEnabled == ChristmasChestsEnabled.AT_CHRISTMAS && christmas);
-            info.setReturnValue(christmasChests ? christmasableSpriteIdentifier.getChristmas() : christmasableSpriteIdentifier.getNormal());
+            if (BetterChristmasChests.getInstance().isChristmas() && christmasableSpriteIdentifier.isFeatureEnabled())
+                info.setReturnValue(christmasableSpriteIdentifier.getChristmas());
+            else
+                info.setReturnValue(christmasableSpriteIdentifier.getNormal());
         }
     }
 }

@@ -4,7 +4,10 @@
   "package": "net.onpointcoding.betterchristmaschests.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MixinTexturedRenderLayers"
+    "MixinTexturedRenderLayers",
+    "MixinHorseEntityRenderer",
+    "MixinZombieHorseEntityRenderer",
+    "MixinDonkeyEntityRenderer"
   ],
   "client": [
   ],
