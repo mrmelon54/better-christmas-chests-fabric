@@ -69,9 +69,8 @@ Files:
 
 ## Discord
 
-- https://discord.gg/4feNg7uN
+- https://discord.gg/usbmdrJ
 
 ## Download
 
-- [Releases](https://github.com/mrmelon54/better-christmas-chests-fabric-1.16/releases/)
 - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/better-christmas-chests)
