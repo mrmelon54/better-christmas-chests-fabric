@@ -15,15 +15,15 @@ class ConfigStructure implements ConfigData {
 
     // Enable horse types separately
     // The normal, zombie and skeleton variants of the Christmas horse chests can't be seen in vanilla
-    public boolean christmasHorseEnabled;
-    public boolean christmasZombieHorseEnabled;
-    public boolean christmasDonkeyEnabled;
+    public boolean christmasHorseEnabled = true;
+    public boolean christmasZombieHorseEnabled = true;
+    public boolean christmasDonkeyEnabled = true;
 
     // Enable chest types separately
-    public boolean christmasChestEnabled;
-    public boolean christmasTrappedChestEnabled;
-    public boolean christmasEnderChestEnabled;
+    public boolean christmasChestEnabled = true;
+    public boolean christmasTrappedChestEnabled = true;
+    public boolean christmasEnderChestEnabled = true;
 
     // Enable minecart with chest type separately
-    public boolean christmasMinecartWithChestEnabled;
+    public boolean christmasMinecartWithChestEnabled = true;
 }
