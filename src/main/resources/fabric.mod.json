@@ -9,7 +9,7 @@
   ],
   "contact": {
     "homepage": "https://minecraft.onpointcoding.net/mods/betterchristmaschests",
-    "sources": "https://github.com/MrMelon54/better-christmas-chests-fabric-1.16"
+    "sources": "https://github.com/MrMelon54/better-christmas-chests-fabric"
   },
   "license": "MIT",
   "icon": "assets/betterchristmaschests/icon.png",
