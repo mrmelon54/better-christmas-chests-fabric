@@ -37,6 +37,10 @@ public class BetterChristmasChests implements ModInitializer {
         return config.christmasModeEnabled == ChristmasChestsEnabled.ALWAYS || (config.christmasModeEnabled == ChristmasChestsEnabled.AT_CHRISTMAS && isChristmasDates());
     }
 
+    public boolean enableCharmPresents() {
+        return getConfig().charmPresentsEnabled;
+    }
+
     public boolean enableChristmasChest() {
         return getConfig().christmasChestEnabled;
     }

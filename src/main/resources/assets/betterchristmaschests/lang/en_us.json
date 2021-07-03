@@ -1,6 +1,7 @@
 {
   "text.autoconfig.betterchristmaschests.title": "Better Christmas Chests",
   "text.autoconfig.betterchristmaschests.option.christmasModeEnabled": "Visible:",
+  "text.autoconfig.betterchristmaschests.option.charmPresentsEnabled": "Charm presents enabled?",
   "text.autoconfig.betterchristmaschests.option.christmasHorseEnabled": "Horse enabled?",
   "text.autoconfig.betterchristmaschests.option.christmasZombieHorseEnabled": "Zombie/skeleton horse enabled?",
   "text.autoconfig.betterchristmaschests.option.christmasDonkeyEnabled": "Donkey/mule enabled?",

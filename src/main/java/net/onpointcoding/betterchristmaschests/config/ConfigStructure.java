@@ -13,6 +13,9 @@ class ConfigStructure implements ConfigData {
     @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
     public ChristmasChestsEnabled christmasModeEnabled = ChristmasChestsEnabled.AT_CHRISTMAS;
 
+    // Enable charm integration
+    public boolean charmPresentsEnabled = true;
+
     // Enable horse types separately
     // The normal, zombie and skeleton variants of the Christmas horse chests can't be seen in vanilla
     public boolean christmasHorseEnabled = true;

@@ -3,13 +3,13 @@
   "minVersion": "0.8",
   "package": "net.onpointcoding.betterchristmaschests.mixin",
   "compatibilityLevel": "JAVA_16",
-  "mixins": [
-    "MixinTexturedRenderLayers",
-    "MixinHorseEntityRenderer",
-    "MixinZombieHorseEntityRenderer",
-    "MixinDonkeyEntityRenderer"
-  ],
+  "mixins": [],
   "client": [
+    "MixinCharmVariantChestBlockEntityRenderer",
+    "MixinDonkeyEntityRenderer",
+    "MixinHorseEntityRenderer",
+    "MixinTexturedRenderLayers",
+    "MixinZombieHorseEntityRenderer"
   ],
   "injectors": {
     "defaultRequire": 1

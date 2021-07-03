@@ -4,6 +4,7 @@ plugins {
 }
 
 repositories {
+    mavenLocal()
     maven {
         url = "https://maven.terraformersmc.com/releases"
     }
@@ -32,9 +33,10 @@ dependencies {
     include modApi("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    modImplementation ("com.terraformersmc:modmenu:${project.modmenu_version}") {
+    modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}") {
         transitive = false
     }
+    modCompileOnly "svenhjol:charm-fabric:${project.charm_version}"
 }
 
 processResources {
@@ -68,7 +70,7 @@ java {
 
 jar {
     from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}"}
+        rename { "${it}_${project.archivesBaseName}" }
     }
 }
 
