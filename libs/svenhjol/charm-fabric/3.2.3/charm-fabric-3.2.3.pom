@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>svenhjol</groupId>
+  <artifactId>charm-fabric</artifactId>
+  <version>3.2.3</version>
+  <dependencies>
+    <dependency>
+      <groupId>me.shedaniel</groupId>
+      <artifactId>RoughlyEnoughItems-api-fabric</artifactId>
+      <version>6.0.258-alpha</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.fabricmc</groupId>
+      <artifactId>fabric-loader</artifactId>
+      <version>0.11.6</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.fabricmc.fabric-api</groupId>
+      <artifactId>fabric-api</artifactId>
+      <version>0.36.0+1.17</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>

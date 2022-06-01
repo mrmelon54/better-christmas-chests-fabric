@@ -11,6 +11,9 @@ repositories {
     maven {
         url = "https://maven.shedaniel.me/"
     }
+    maven {
+        url = "file://${projectDir}/libs"
+    }
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
