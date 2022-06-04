@@ -1,4 +1,4 @@
-package net.onpointcoding.betterchristmaschests.enums;
+package xyz.mrmelon54.BetterChristmasChests.enums;
 
 public enum ChristmasChestsEnabled {
     ALWAYS("Always"),

@@ -1,13 +1,13 @@
-package net.onpointcoding.betterchristmaschests.config;
+package xyz.mrmelon54.BetterChristmasChests.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
-import net.onpointcoding.betterchristmaschests.enums.ChristmasChestsEnabled;
+import xyz.mrmelon54.BetterChristmasChests.enums.ChristmasChestsEnabled;
 
 @SuppressWarnings("unused")
-@Config(name = "betterchristmaschests")
-@Config.Gui.Background("minecraft:textures/block/oak_planks.png")
+@Config(name = "better-christmas-chests")
+@Config.Gui.Background("better-christmas-chests:textures/gui/candy_cane.png")
 public
 class ConfigStructure implements ConfigData {
     @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)

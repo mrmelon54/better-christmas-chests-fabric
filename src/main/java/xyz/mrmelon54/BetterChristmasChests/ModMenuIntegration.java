@@ -1,11 +1,11 @@
-package net.onpointcoding.betterchristmaschests;
+package xyz.mrmelon54.BetterChristmasChests;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.onpointcoding.betterchristmaschests.config.ConfigStructure;
+import xyz.mrmelon54.BetterChristmasChests.config.ConfigStructure;
 
 @Environment(EnvType.CLIENT)
 public class ModMenuIntegration implements ModMenuApi {

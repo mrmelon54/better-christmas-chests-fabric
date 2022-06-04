@@ -1,4 +1,4 @@
-package net.onpointcoding.betterchristmaschests.utils;
+package xyz.mrmelon54.BetterChristmasChests.utils;
 
 import net.minecraft.client.util.SpriteIdentifier;
 

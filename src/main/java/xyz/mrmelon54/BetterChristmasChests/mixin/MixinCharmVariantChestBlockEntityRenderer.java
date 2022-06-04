@@ -1,4 +1,4 @@
-package net.onpointcoding.betterchristmaschests.mixin;
+package xyz.mrmelon54.BetterChristmasChests.mixin;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -6,7 +6,7 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.enums.ChestType;
 import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.util.Identifier;
-import net.onpointcoding.betterchristmaschests.BetterChristmasChests;
+import xyz.mrmelon54.BetterChristmasChests.client.BetterChristmasChestsClient;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
@@ -27,7 +27,7 @@ public class MixinCharmVariantChestBlockEntityRenderer {
     private static final SpriteIdentifier CHRISTMAS_TRAPPED_RIGHT = getChristmasChestTextureId("trapped_christmas_right");
 
     private static SpriteIdentifier getChristmasChestTextureId(String variant) {
-        return new SpriteIdentifier(CHEST_ATLAS_TEXTURE, new Identifier("betterchristmaschests:entity/chest/" + variant));
+        return new SpriteIdentifier(CHEST_ATLAS_TEXTURE, new Identifier("better-christmas-chests:entity/chest/" + variant));
     }
 
     @Inject(method = "getMaterial", at = @At("HEAD"), cancellable = true)
@@ -35,7 +35,7 @@ public class MixinCharmVariantChestBlockEntityRenderer {
         if (!(blockEntity instanceof VariantChestBlockEntity))
             cir.setReturnValue(null);
 
-        BetterChristmasChests betterChristmasChests = BetterChristmasChests.getInstance();
+        BetterChristmasChestsClient betterChristmasChests = BetterChristmasChestsClient.getInstance();
         if (betterChristmasChests.isChristmas() && betterChristmasChests.enableCharmPresents())
             if (blockEntity instanceof VariantTrappedChestBlockEntity) cir.setReturnValue(switch (chestType) {
                 case SINGLE -> CHRISTMAS_TRAPPED;
