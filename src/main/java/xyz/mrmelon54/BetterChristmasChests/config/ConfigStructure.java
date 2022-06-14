@@ -29,4 +29,7 @@ class ConfigStructure implements ConfigData {
 
     // Enable minecart with chest type separately
     public boolean christmasMinecartWithChestEnabled = true;
+
+    // Enable chest boat type separately
+    public boolean christmasChestBoatEnabled = true;
 }

@@ -8,5 +8,6 @@
   "text.autoconfig.better-christmas-chests.option.christmasChestEnabled": "Chest enabled?",
   "text.autoconfig.better-christmas-chests.option.christmasTrappedChestEnabled": "Trapped chest enabled?",
   "text.autoconfig.better-christmas-chests.option.christmasEnderChestEnabled": "Ender chest enabled?",
-  "text.autoconfig.better-christmas-chests.option.christmasMinecartWithChestEnabled": "Minecart with chest enabled?"
+  "text.autoconfig.better-christmas-chests.option.christmasMinecartWithChestEnabled": "Minecart with chest enabled?",
+  "text.autoconfig.better-christmas-chests.option.christmasChestBoatEnabled": "Boat with chest enabled?"
 }

@@ -3,12 +3,14 @@ package xyz.mrmelon54.BetterChristmasChests.client;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
+import net.fabricmc.fabric.mixin.object.builder.client.ModelPredicateProviderRegistrySpecificAccessor;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import xyz.mrmelon54.BetterChristmasChests.config.ConfigStructure;
 import xyz.mrmelon54.BetterChristmasChests.enums.ChristmasChestsEnabled;
-import xyz.mrmelon54.BetterChristmasChests.models.ChristmasChestMinecartModelProvider;
+import xyz.mrmelon54.BetterChristmasChests.models.ChristmasChestModelProvider;
+import xyz.mrmelon54.BetterChristmasChests.utils.ChestBoatArray;
 
 import java.util.Calendar;
 
@@ -23,8 +25,10 @@ public class BetterChristmasChestsClient implements ClientModInitializer {
         AutoConfig.register(ConfigStructure.class, JanksonConfigSerializer::new);
         config = AutoConfig.getConfigHolder(ConfigStructure.class).getConfig();
 
-        ChristmasChestMinecartModelProvider christmasChestMinecartModelProvider = new ChristmasChestMinecartModelProvider();
-        FabricModelPredicateProviderRegistry.register(Items.CHEST_MINECART, new Identifier("christmas_chest_minecart"), christmasChestMinecartModelProvider);
+        ChristmasChestModelProvider christmasChestModelProvider = new ChristmasChestModelProvider();
+        ModelPredicateProviderRegistrySpecificAccessor.callRegister(Items.CHEST_MINECART, new Identifier("christmas_chest"), christmasChestModelProvider);
+        for (Item chestBoat : ChestBoatArray.ChestBoats)
+            ModelPredicateProviderRegistrySpecificAccessor.callRegister(chestBoat, new Identifier("christmas_chest"), christmasChestModelProvider);
     }
 
     public boolean isChristmasDates() {
@@ -67,6 +71,10 @@ public class BetterChristmasChestsClient implements ClientModInitializer {
 
     public boolean enableChristmasZombieHorse() {
         return getConfig().christmasZombieHorseEnabled;
+    }
+
+    public boolean enableChristmasChestBoat() {
+        return getConfig().christmasChestBoatEnabled;
     }
 
     public static BetterChristmasChestsClient getInstance() {

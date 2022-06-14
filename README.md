@@ -4,7 +4,7 @@
 
 Requires the [Fabric Loader](https://fabricmc.net/use/) and [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
 
-Logo made by [@LimeShulkerBox](https://www.curseforge.com/members/limeshulkerbox/projects)
+Logo made by [@CarbonGhost](https://github.com/CarbonGhost)
 
 ## Setup
 
@@ -33,12 +33,26 @@ Features include:
 - Christmas horse chests
 - Christmas zombie/skeleton horse chests
 - Christmas donkey/mule chests
+- Christmas chest boats
 
 ## Resource packs
 
 Feel free to make a resource pack to change them
 
-Path: `assets/betterchristmaschests/textures/entity/chest`
+Path: `assets/better-christmas-chests/textures/item`
+
+Files:
+
+- christmas\_chest\_minecart.png
+- christmas\_acacia\_chest\_boat.png
+- christmas\_birch\_chest\_boat.png
+- christmas\_dark\_oak\_chest\_boat.png
+- christmas\_jungle\_chest\_boat.png
+- christmas\_mangrove\_chest\_boat.png
+- christmas\_oak\_chest\_boat.png
+- christmas\_spruce\_chest\_boat.png
+
+Path: `assets/better-christmas-chests/textures/entity/chest`
 
 Files:
 
@@ -47,13 +61,19 @@ Files:
 - trapped\_christmas\_left.png
 - trapped\_christmas\_right.png
 
-Path: `assets/betterchristmaschests/textures/item`
+Path: `assets/better-christmas-chests/textures/entity/chest_boat`
 
 Files:
 
-- christmas\_chest\_minecart.png
+- christmas\_acacia.png
+- christmas\_birch.png
+- christmas\_dark\_oak.png
+- christmas\_jungle.png
+- christmas\_mangrove.png
+- christmas\_oak.png
+- christmas\_spruce.png
 
-Path: `assets/betterchristmaschests/textures/entity/horse`
+Path: `assets/better-christmas-chests/textures/entity/horse`
 
 Files:
 

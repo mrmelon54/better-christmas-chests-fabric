@@ -1,14 +1,14 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecraft:item/chest_minecart"
+    "layer0": "minecraft:item/oak_chest_boat"
   },
   "overrides": [
     {
       "predicate": {
         "christmas_chest": 1
       },
-      "model": "better-christmas-chests:item/christmas_chest_minecart"
+      "model": "better-christmas-chests:item/christmas_oak_chest_boat"
     }
   ]
 }
