@@ -96,3 +96,4 @@ Files:
 ## Download
 
 - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/better-christmas-chests)
+- [Modrinth](https://modrinth.com/mod/better-christmas-chests)
